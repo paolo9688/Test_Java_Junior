@@ -1,0 +1,105 @@
+Obiettivo: Questo test è progettato per valutare le competenze di un candidato Java Junior in un contesto aziendale, con un focus su compiti pratici che potrebbero essere incontrati in un ambiente di lavoro reale. Non include l'uso di Stream API e si concentra su concetti base di Java e MySQL.
+
+Parte 1: Java Junior (50 punti)
+
+Scenario Aziendale: Sei stato assunto come sviluppatore junior in una startup che sviluppa un'applicazione di gestione degli eventi. La tua prima task è di lavorare su un sistema che gestisce gli utenti e i loro eventi.
+
+1. Gestione degli Utenti (15 punti)
+
+Crea una classe Utente che rappresenti un utente del sistema di gestione eventi. Questa classe deve avere i seguenti attributi:
+
+    id (int)
+    nome (String)
+    cognome (String)
+    email (String)
+    dataRegistrazione (Date)
+
+Includi:
+
+    Un costruttore che accetti tutti gli attributi tranne id, che sarà impostato automaticamente a 0.
+    Metodi getter e setter per tutti gli attributi.
+    Un metodo toString() che fornisca una rappresentazione leggibile dell'utente.
+    Un metodo isNewUser() che restituisca true se l'utente è stato registrato da meno di 30 giorni, altrimenti false.
+
+Java
+
+// Scrivi qui il codice della classe Utente
+
+2. Gestione degli Eventi (15 punti)
+
+Crea una classe Evento che rappresenti un evento nel sistema. Questa classe deve avere i seguenti attributi:
+
+    id (int)
+    titolo (String)
+    dataEvento (Date)
+    organizzatore (Utente)
+
+Includi:
+
+    Un costruttore che accetti tutti gli attributi tranne id, che sarà impostato automaticamente a 0.
+    Metodi getter e setter per tutti gli attributi.
+    Un metodo toString() che fornisca una rappresentazione leggibile dell'evento.
+    Un metodo isExpired() che restituisca true se la data dell'evento è passata rispetto alla data corrente, altrimenti false.
+
+Java
+
+// Scrivi qui il codice della classe Evento
+
+3. Logica di Business (20 punti)
+
+Scrivi una classe GestioneEventi che contenga una lista di Utente e una lista di Evento. Questa classe deve avere i seguenti metodi:
+
+    aggiungiUtente(Utente utente): Aggiunge un utente alla lista degli utenti.
+    aggiungiEvento(Evento evento): Aggiunge un evento alla lista degli eventi.
+    trovaEventiPerUtente(Utente utente): Restituisce una lista di eventi organizzati da un dato utente.
+    rimuoviEventiScaduti(): Rimuove tutti gli eventi scaduti dalla lista degli eventi.
+
+Nota: Per trovaEventiPerUtente e rimuoviEventiScaduti, considera che non puoi usare Stream API. Usa cicli tradizionali.
+
+Java
+
+// Scrivi qui il codice della classe GestioneEventi
+
+Parte 2: MySQL (50 punti)
+
+Scenario Aziendale: La tua azienda ha bisogno di un database per memorizzare le informazioni degli utenti e degli eventi. Il tuo compito è di progettare e interagire con questo database.
+
+1. Progettazione del Database (15 punti)
+
+Scrivi le query SQL per creare due tabelle, Utenti e Eventi, che riflettano le classi Java Utente e Evento precedentemente definite. Assicurati di includere:
+
+    Chiavi primarie appropriate.
+    Una chiave esterna in Eventi che punti all'id di Utenti per rappresentare l'organizzatore.
+    Tipi di dati appropriati per ogni campo.
+
+SQL
+
+-- Scrivi qui le query SQL per creare le tabelle
+
+2. Inserimento di Dati (10 punti)
+
+Scrivi le query SQL per inserire almeno 3 utenti e 3 eventi nel database. Assicurati che ogni evento sia collegato a un utente esistente.
+
+SQL
+
+-- Scrivi qui le query SQL per inserire i dati
+
+3. Query di Business Intelligence (15 punti)
+
+Scrivi le seguenti query SQL per ottenere informazioni utili dal database:
+
+    Trova tutti gli eventi futuri (non scaduti) ordinati per data.
+    Trova l'utente che ha organizzato il maggior numero di eventi.
+    Calcola il numero medio di eventi per utente.
+
+SQL
+
+-- Scrivi qui le query SQL per le operazioni di Business Intelligence
+
+4. Manutenzione del Database (10 punti)
+
+Scrivi una query SQL per aggiornare l'email di un utente specifico (ad esempio, l'utente con id = 1). Scrivi anche una query per eliminare tutti gli eventi organizzati da un utente specifico (ad esempio, l'utente con id = 2).
+
+SQL
+
+-- Scrivi qui le query SQL per la manutenzione del database
