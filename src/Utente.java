@@ -71,7 +71,6 @@ public class Utente {
         LocalDate oggi = LocalDate.now();
         long giorniTrascorsi = ChronoUnit.DAYS.between(dataRegistrazione, oggi);
         boolean giorniDallaRegistrazione = giorniTrascorsi < 30;
-        //boolean isAfterNow = LocalDate.now().isAfter(this.dataRegistrazione);
         return giorniDallaRegistrazione;
     }
 }

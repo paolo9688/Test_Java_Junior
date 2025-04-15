@@ -1,12 +1,12 @@
 import java.time.LocalDate;
 
-public class Eventi {
+public class Evento {
     private Integer id;
     private String titolo;
     private LocalDate dataEvento;
     private Utente organizzatore;
 
-    public Eventi(Utente organizzatore, LocalDate dataEvento, String titolo) {
+    public Evento(Utente organizzatore, LocalDate dataEvento, String titolo) {
         this.id = 0;
         this.organizzatore = organizzatore;
         this.dataEvento = dataEvento;
@@ -47,7 +47,7 @@ public class Eventi {
 
     @Override
     public String toString() {
-        return "Eventi{" +
+        return "Evento{" +
                 "id=" + id +
                 ", titolo='" + titolo + '\'' +
                 ", dataEvento=" + dataEvento +
